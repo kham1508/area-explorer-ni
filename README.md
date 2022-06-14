@@ -1,2 +1,2 @@
 # area-explorer
-hello John
+hello John and Jane
