@@ -1,9 +1,12 @@
 <script context="module">
 	export const prerender = true;
-
+	// getData is a function in utils.js that goes to a url input and looks for a return of csv data
 	import { getData } from "$lib/utils";
+	// a constant with 3 string urls, options - the places.csv, places - json files for each area code (accessed via urls.places), 
+	// quantiles - not sure but not used in index currently
 	import { urls } from "$lib/config";
 	
+	// create a reference to thye json for the current area to be loaded - called in the load() func below
 	async function loadArea(code, options) {
 		let res = await fetch(urls.places + code + '.json');
 		let json = await res.json();
