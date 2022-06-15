@@ -15,7 +15,7 @@
 	}
 
 	async function loadEW(options) {
-		const code = 'K04000001';
+		const code = 'N92000001';
 
 		let res = await fetch(urls.places + code + '.json');
 		let json = await res.json();

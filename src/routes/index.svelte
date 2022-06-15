@@ -13,8 +13,8 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{assets}/" />
 	<meta property="og:image:type" content="image/jpeg" />
-	<meta property="og:description" content="Explore census data for places in England and Wales." />
-	<meta name="description" content="Explore census data for places in England and Wales." />
+	<meta property="og:description" content="Explore census data for places in Northern Ireland." />
+	<meta name="description" content="Explore census data for places in Northern Ireland." />
 </svelte:head>
 
 <Section column="wide">
@@ -22,22 +22,20 @@
     <span class="text-big title">Area Explorer</span>
     <p>Select a country or region to start exploring</p>
     <ul>
-      <li><a href="{base}/K04000001"><strong>England and Wales</strong></a></li>
+      <li><a href="{base}/N92000001"><strong>Northern Ireland</strong></a></li>
       <ul>
-        <li><a href="{base}/E92000001">England</a></li>
-        <ul>
-          <li><a href="{base}/E12000001">North East</a></li>
-          <li><a href="{base}/E12000002">North West</a></li>
-          <li><a href="{base}/E12000003">Yorkshire and The Humber</a></li>
-          <li><a href="{base}/E12000004">East Midlands</a></li>
-          <li><a href="{base}/E12000005">West Midlands</a></li>
-          <li><a href="{base}/E12000006">East of England</a></li>
-          <li><a href="{base}/E12000007">London</a></li>
-          <li><a href="{base}/E12000008">South East</a></li>
-          <li><a href="{base}/E12000009">South West</a></li>
-        </ul>
-        <li><a href="{base}/W92000004">Wales</a></li>
-      </ul>
+          <li><a href="{base}/N09000001">Antrim and Newtownabbey</a></li>
+          <li><a href="{base}/N09000002">Armagh City, Banbridge and Craigavon</a></li>
+          <li><a href="{base}/N09000003">Belfast</a></li>
+          <li><a href="{base}/N09000004">Causeway Coast and Glens</a></li>
+          <li><a href="{base}/N09000005">Derry City and Strabane</a></li>
+          <li><a href="{base}/N09000006">Fermanagh and Omagh</a></li>
+          <li><a href="{base}/N09000007">Lisburn and Castlereagh</a></li>
+          <li><a href="{base}/N09000008">Mid and East Antrim</a></li>
+          <li><a href="{base}/N09000009">Mid Ulster</a></li>
+          <li><a href="{base}/N09000010">Newry, Mourne and Down</a></li>
+          <li><a href="{base}/N09000011">Ards and North Down</a></li>
+       </ul>
     </ul>
   </div>
 </Section>
