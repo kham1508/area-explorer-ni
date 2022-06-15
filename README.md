@@ -1,2 +1,2 @@
 # area-explorer
-boatsdfwefwef
+version 1 of area explorer for NI
