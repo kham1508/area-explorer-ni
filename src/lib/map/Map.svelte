@@ -6,9 +6,9 @@
 	export let id = "map";
 	export let location = {
 		bounds: [
-			[-5.816, 49.864],
-			[1.863, 55.872],
-		], // England & Wales
+			[-8.1775, 54.02275],
+			[-5.43279, 55.31298],
+		], // Northern Ireland
 	};
 	export let style = "https://bothness.github.io/ons-basemaps/data/style-omt.json";
 	export let interactive = true;
