@@ -166,7 +166,7 @@
 	}
 
 	$: w && onResize();
-	$: chartLabel = overtime ? '2001 comparison' : place && place.parents[0] ? 'England and Wales comparison' : null;
+	$: chartLabel = overtime ? '2001 comparison' : place && place.parents[0] ? 'Northern Ireland comparison' : null;
 	$: place && update(place);
 	$: hasChange = place && place.data.population.value.change.all != null;
 </script>

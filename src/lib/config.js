@@ -27,6 +27,7 @@ export const types = {
 	oa: {name: 'Output area', pl: 'Output areas'},
 	lsoa: {name: 'LSOA', pl: 'LSOAs'},
 	msoa: {name: 'MSOA', pl: 'MSOAs'},
+	dea: {name: 'District Electoral Area', pl: 'District Electoral Areas'},
 	lad: {name: 'District', pl: 'Districts'},
 	cty: {name: 'County', pl: 'Counties'},
 	rgn: {name: 'Region', pl: 'Regions'},
