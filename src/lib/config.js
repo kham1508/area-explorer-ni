@@ -76,11 +76,8 @@ export const codes = {
 		{code: 'rent_free', label: 'rent free'}
 	],
 	travel: [
-		{code: "train_metro", label: "train/metro"},
-		{code: "bus"},
-		{code: "taxi"},
 		{code: "car_van", label: "car/van"},
-		{code: "moto", label: "motorbike/scooter"},
+		{code: "bus"},
 		{code: "bicycle"},
 		{code: "foot", label: "on foot"},
 		{code: "home", label: "home worker"},
