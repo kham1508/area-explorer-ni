@@ -18,7 +18,7 @@ export const themes = {
 
 export const urls = {
 		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5c/places_2021_ni_full.csv',
-		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5c/json/',
+		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5d/json/',
 		quantiles: 'https://raw.githubusercontent.com/ONSvisual/census-data-v2/main/json/quantiles/deciles_'
 };
 

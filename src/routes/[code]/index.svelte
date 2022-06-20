@@ -166,7 +166,7 @@
 	}
 
 	$: w && onResize();
-	$: chartLabel = overtime ? '2001 comparison' : place && place.parents[0] ? 'England and Wales comparison' : null;
+	$: chartLabel = overtime ? '2001 comparison' : place && place.parents[0] ? 'Northern Ireland comparison' : null;
 	$: place && update(place);
 	$: hasChange = place && place.data.population.value.change.all != null;
 </script>
@@ -233,7 +233,7 @@
 		<span class="text-big">{place.data.population.value['2011'].all.toLocaleString()}</span><br/>
 		{#if !overtime}
 		{#if place.type != 'ew'}
-		<span class="text-small"><Em>{place.data.population.value['2011'].all / ew.data.population.value['2011'].all >= 0.001 ? ((place.data.population.value['2011'].all / ew.data.population.value['2011'].all) * 100).toFixed(1) : '<0.1'}%</Em> of England and Wales population</span>
+		<span class="text-small"><Em>{place.data.population.value['2011'].all / ew.data.population.value['2011'].all >= 0.001 ? ((place.data.population.value['2011'].all / ew.data.population.value['2011'].all) * 100).toFixed(1) : '<0.1'}%</Em> of Northern Ireland population</span>
 		{#if place.type != 'ctry'}
 		<div class="text-small muted">{place.data.population.value_rank['2011'].all.toLocaleString()}{suffixer(place.data.population.value_rank['2011'].all)} largest population of {place.count.toLocaleString()} {types[place.type].pl.toLowerCase()}</div>
 		{/if}
