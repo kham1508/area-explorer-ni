@@ -7,7 +7,7 @@
 	export let data;
 	export let suffix = '%';
 	export let decimals = 0;
-	export let fill = '#206095';
+	export let fill = '#212373';
 	
 	export let xKey = 'x';
 	export let yKey = 'y';

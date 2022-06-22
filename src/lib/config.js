@@ -18,7 +18,7 @@ export const themes = {
 
 export const urls = {
 		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5c/places_2021_ni_full.csv',
-		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5d/json/',
+		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5c/json/',
 		quantiles: 'https://raw.githubusercontent.com/ONSvisual/census-data-v2/main/json/quantiles/deciles_'
 };
 
@@ -28,7 +28,7 @@ export const types = {
 	lsoa: {name: 'LSOA', pl: 'LSOAs'},
 	msoa: {name: 'MSOA', pl: 'MSOAs'},
 	dea: {name: 'District Electoral Area', pl: 'District Electoral Areas'},
-	lad: {name: 'District', pl: 'Districts'},
+	lad: {name: 'Local Government District', pl: 'Districts'},
 	cty: {name: 'County', pl: 'Counties'},
 	rgn: {name: 'Region', pl: 'Regions'},
 	ctry: {name: 'Country', pl: 'Countries'}

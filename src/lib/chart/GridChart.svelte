@@ -6,7 +6,7 @@
 	export let yKey = "y";
 	export let zKey = "ew";
 	export let width = 5;
-	export let colors = ['#206095', '#A8BD3A', '#003C57', '#27A0CC', '#118C7B', '#F66068', '#746CB1', '#22D0B6', 'lightgrey'];
+	export let colors = ['#212373', '#781C87',  '#0D9AA2', '#C11B71', '#FB7979', '#F66068', '#746CB1', '#22D0B6', 'lightgrey'];
 	export let vertical = true;
 	export let round = false;
 	export let decimals = 0;
