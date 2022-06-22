@@ -362,6 +362,9 @@
 		</span>
 	</div>
 	<div style="grid-column: span {cols};">
+		<h4>Data for {place.name} can be downloaded at http://www.nisra.gov.uk/census</h4>
+	</div>
+	<div style="grid-column: span {cols};">
 		<h3>Key stats for {place.name} <span class="title-inset muted">Census 2011</span></h3>
 	</div>
 	<div>
