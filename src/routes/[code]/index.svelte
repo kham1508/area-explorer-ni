@@ -396,11 +396,28 @@
 		<StackedBarChart data="{place && makeData(['population', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
 	<div>
+		<span class="text-bold">Location</span><br/>
+			{#if place.type == 'ew' || place.type =='ctry'}
+			Northern Ireland.
+			{:else}
+			{place.name} is a {types[place.type].name} in {place.parents[0].type == 'rgn' ? 'the ' + place.parents[0].name : place.parents[0].name}.
+			{/if}
+	</div>
+	<div>
 		<span class="text-bold">Ethnicity</span><br/>
 		<StackedBarChart data="{place && makeData(['ethnicity', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
 	<div>
-		<span class="text-bold">General health</span><br/>
+		<span class="text-bold">Health bar</span><br/>
+		<div class="chart" style="height: 100px;">
+			<ColChart data="{place && makeData(['health', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}"/>
+		</div>
+		{#if chartLabel && !(overtime && !hasChange)}
+		<div class="text-small muted"><li class="line"></li> {chartLabel}</div>
+		{/if}
+	</div>
+	<div>
+		<span class="text-bold">Health</span><br/>
 		<StackedBarChart data="{place && makeData(['health', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
 	<div>
@@ -414,6 +431,24 @@
 	<div>
 		<span class="text-bold">Home ownership</span><br/>
 		<StackedBarChart data="{place && makeData(['tenure', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
+	</div>
+	<div>
+		<span class="text-bold">Population Sex</span><br/>
+		<div class="chart" style="height: 100px;">
+			<ColChart data="{place && makeData(['population', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}"/>
+		</div>
+		{#if chartLabel && !(overtime && !hasChange)}
+		<div class="text-small muted"><li class="line"></li> {chartLabel}</div>
+		{/if}
+	</div>
+	<div>
+		<span class="text-bold">ethnicity bar</span><br/>
+		<div class="chart" style="height: 100px;">
+			<ColChart data="{place && makeData(['ethnicity', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}"/>
+		</div>
+		{#if chartLabel && !(overtime && !hasChange)}
+		<div class="text-small muted"><li class="line"></li> {chartLabel}</div>
+		{/if}
 	</div>
 </div>
 {/if}

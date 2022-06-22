@@ -53,20 +53,20 @@ export const codes = {
 		{code: 'inactive'}
 	],
 	ethnicity: [
-		{code: 'white'},
-		{code: 'asian'},
-		{code: 'black'},
-		{code: 'mixed'},
-		{code: 'other'}
+		{code: 'white', label: 'White'},
+		{code: 'asian', label: 'Asian'},
+		{code: 'black', label: 'Black'},
+		{code: 'mixed', label: 'Mixed'},
+		{code: 'other', label: 'Other'}
 	],
 	population: [
 		{code: 'female'},
 		{code: 'male'}
 	],
 	health: [
-		{code: 'good'},
-		{code: 'fair'},
-		{code: 'bad'}
+		{code: 'good', label: 'Good'},
+		{code: 'fair', label: 'Fair'},
+		{code: 'bad', label: 'Bad'}
 	],
 	tenure: [
 		{code: 'owned', label: 'owner occupied'},
@@ -76,7 +76,7 @@ export const codes = {
 		{code: 'rent_free', label: 'rent free'}
 	],
 	travel: [
-		{code: "car_van", label: "car/van"},
+		{code: "car_van", label: "car and van"},
 		{code: "bus"},
 		{code: "bicycle"},
 		{code: "foot", label: "on foot"},
