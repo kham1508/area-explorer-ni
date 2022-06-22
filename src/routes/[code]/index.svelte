@@ -362,10 +362,19 @@
 		</span>
 	</div>
 	<div style="grid-column: span {cols};">
-		<h4>Data for {place.name} can be downloaded at http://www.nisra.gov.uk/census</h4>
-	</div>
-	<div style="grid-column: span {cols};">
 		<h3>Key stats for {place.name} <span class="title-inset muted">Census 2011</span></h3>
+	</div>
+	<div>
+		<span class="text-bold">Location</span><br/>
+			{#if place.type == 'ew' || place.type =='ctry'}
+			Northern Ireland.
+			{:else}
+			{place.name} is a {types[place.type].name} in {place.parents[0].type == 'rgn' ? 'the ' + place.parents[0].name : place.parents[0].name}.
+			{/if}
+	</div>
+	<div>
+		<span class="text-bold">Download data</span><br/>
+			Data for {place.name} can be downloaded here.
 	</div>
 	<div>
 		<span class="text-bold">Median age</span>
@@ -394,14 +403,6 @@
 	<div>
 		<span class="text-bold">Sex</span><br/>
 		<StackedBarChart data="{place && makeData(['population', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
-	</div>
-	<div>
-		<span class="text-bold">Location</span><br/>
-			{#if place.type == 'ew' || place.type =='ctry'}
-			Northern Ireland.
-			{:else}
-			{place.name} is a {types[place.type].name} in {place.parents[0].type == 'rgn' ? 'the ' + place.parents[0].name : place.parents[0].name}.
-			{/if}
 	</div>
 	<div>
 		<span class="text-bold">Ethnicity</span><br/>
