@@ -99,7 +99,7 @@ export const mapSources = {
 		id: 'msoa',
 		promoteId: 'areacd',
 		type: 'vector',
-		url: 'https://cdn.ons.gov.uk/maptiles/administrative/msoa/v2/boundaries/{z}/{x}/{y}.pbf',
+		url: 'https://raw.githubusercontent.com/kham1508/map_tiles/main/dea/{z}/{x}/{y}.pbf',
 		minzoom: 6,
 		maxzoom: 12
 	},
@@ -168,7 +168,7 @@ export const mapLayers = {
 	},
 	msoa: {
 		source: 'msoa',
-		sourceLayer: 'msoa',
+		sourceLayer: 'dea',
 		code: 'areacd',
 		name: 'areanm'
 	},
