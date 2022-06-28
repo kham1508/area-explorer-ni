@@ -163,7 +163,7 @@ export const mapLayers = {
 		filter: [
 			"all",
 			["==", "lower", "true"],
-			["in", "country", "E", "W"]
+			["in", "country", "E", "W", "N"]
 		]
 	},
 	msoa: {
