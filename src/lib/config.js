@@ -17,17 +17,15 @@ export const themes = {
 };
 
 export const urls = {
-		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5f/places_2021_ni_full.csv',
-		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v5f/json/',
-		quantiles: 'https://raw.githubusercontent.com/ONSvisual/census-data-v2/main/json/quantiles/deciles_'
+		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v9/places_2021_ni_full.csv',
+		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v9/jsons/',
 };
 	
 export const types = {
 	ew: {name: '', pl: ''},
 	oa: {name: 'Output area', pl: 'Output areas'},
-	lsoa: {name: 'LSOA', pl: 'LSOAs'},
-	msoa: {name: 'MSOA', pl: 'MSOAs'},
-	dea: {name: 'District Electoral Area', pl: 'District Electoral Areas'},
+	lsoa: {name: 'Super Output Area', pl: 'Super Output Areas'},
+	msoa: {name: 'District Electoral Area', pl: 'District Electoral Areas'},
 	lad: {name: 'Local Government District', pl: 'Districts'},
 	cty: {name: 'County', pl: 'Counties'},
 	rgn: {name: 'Region', pl: 'Regions'},
@@ -52,8 +50,15 @@ export const codes = {
 		{code: 'unemployed'},
 		{code: 'inactive'}
 	],
-	ethnicity: [
-		{code: 'white', label: 'White'},
+	topic_new: [
+		{code: 'bread'},
+		{code: 'milk'},
+		{code: 'ham'},
+		{code: 'cheese'},
+		{code: 'eggs'}
+	],
+	topic1: [
+		{code: 'pink', label: 'Pink'},
 		{code: 'asian', label: 'Asian'},
 		{code: 'black', label: 'Black'},
 		{code: 'mixed', label: 'Mixed'},
@@ -62,11 +67,6 @@ export const codes = {
 	population: [
 		{code: 'female'},
 		{code: 'male'}
-	],
-	health: [
-		{code: 'good', label: 'Good'},
-		{code: 'fair', label: 'Fair'},
-		{code: 'bad', label: 'Bad'}
 	],
 	tenure: [
 		{code: 'owned', label: 'owner occupied'},
