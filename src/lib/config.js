@@ -50,6 +50,11 @@ export const codes = {
 		{code: 'unemployed'},
 		{code: 'inactive'}
 	],
+	health: [
+		{code: 'good'},
+		{code: 'bad'},
+		{code: 'fair'}
+	],
 	topic_new: [
 		{code: 'bread'},
 		{code: 'milk'},
