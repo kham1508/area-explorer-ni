@@ -18,8 +18,8 @@ const config = {
 		},
 		ssr: false,
 		paths: {
-			assets: production ? 'https://kham1508.github.io/host_test_2' : '',
-			base: production ? '/host_test_2' : ''
+			assets: production ? 'https://kham1508.github.io/area-explorer-ni' : '',
+			base: production ? '/area-explorer-ni' : ''
 		}
 	}
 };
