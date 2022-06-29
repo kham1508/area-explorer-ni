@@ -267,7 +267,7 @@
 	</div>
 	<div id="map" style="grid-column: span {cols == 2 ? 2 : cols && cols > 2 ? cols - 1 : 1};">
 		<Map bind:map location={{bounds: place.bounds}} options={{fitBoundsOptions: {padding: 20}}} style={mapStyle}>
-			{#each ['oa', 'lsoa', 'msoa'] as key}
+			{#each ['dea'] as key}
 			<MapSource {...mapSources[key]}>
 				<MapLayer
 					{...mapLayers[key]}
@@ -302,7 +302,7 @@
 			</MapSource>
 			{/each}
 			<MapSource {...mapSources.crd}>
-				{#each ['lad', 'cty', 'rgn', 'ctry'] as key}
+			{#each ['lgd'] as key}
 				<MapLayer
 					{...mapLayers[key]}
 					id={key + "-fill"}

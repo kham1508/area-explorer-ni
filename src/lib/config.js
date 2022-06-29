@@ -17,18 +17,18 @@ export const themes = {
 };
 
 export const urls = {
-		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v9/places_2021_ni_full.csv',
-		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v9/jsons/',
+		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v9/places_test.csv',
+		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v10/jsons/',
 };
 	
 export const types = {
-	ew: {name: '', pl: ''},
-	oa: {name: 'Output area', pl: 'Output areas'},
-	lsoa: {name: 'Super Output Area', pl: 'Super Output Areas'},
-	msoa: {name: 'District Electoral Area', pl: 'District Electoral Areas'},
-	lad: {name: 'Local Government District', pl: 'Districts'},
-	cty: {name: 'County', pl: 'Counties'},
-	rgn: {name: 'Region', pl: 'Regions'},
+//	ew: {name: '', pl: ''},
+//	oa: {name: 'Output area', pl: 'Output areas'},
+//	lsoa: {name: 'Super Output Area', pl: 'Super Output Areas'},
+	dea: {name: 'District Electoral Area', pl: 'District Electoral Areas'},
+	lgd: {name: 'Local Government District', pl: 'Districts'},
+//	cty: {name: 'County', pl: 'Counties'},
+//	rgn: {name: 'Region', pl: 'Regions'},
 	ctry: {name: 'Country', pl: 'Countries'}
 };
 
@@ -92,98 +92,99 @@ export const mapSources = {
 		id: 'crd',
 		promoteId: 'areacd',
 		type: 'vector',
-		url: 'https://cdn.jsdelivr.net/gh/bothness/map-tiles/authorities/{z}/{x}/{y}.pbf',
+		url: 'https://raw.githubusercontent.com/kham1508/map_tiles/main/lgd2012/{z}/{x}/{y}.pbf',
 		maxzoom: 12
 	},
-	msoa: {
-		id: 'msoa',
+	dea: {
+		id: 'dea',
 		promoteId: 'areacd',
 		type: 'vector',
 		url: 'https://raw.githubusercontent.com/kham1508/map_tiles/main/dea/{z}/{x}/{y}.pbf',
 		minzoom: 6,
 		maxzoom: 12
-	},
-	lsoa: {
-		id: 'lsoa',
-		promoteId: 'areacd',
-		type: 'vector',
-		url: 'https://cdn.ons.gov.uk/maptiles/administrative/lsoa/v2/boundaries/{z}/{x}/{y}.pbf',
-		minzoom: 6,
-		maxzoom: 12
-	},
-	oa: {
-		id: 'oa',
-		promoteId: 'areacd',
-		type: 'vector',
-		url: 'https://cdn.ons.gov.uk/maptiles/administrative/oa/v1/boundaries/{z}/{x}/{y}.pbf',
-		minzoom: 6,
-		maxzoom: 12
 	}
+//	lsoa: {
+//		id: 'lsoa',
+//		promoteId: 'areacd',
+//		type: 'vector',
+//		url: 'https://cdn.ons.gov.uk/maptiles/administrative/lsoa/v2/boundaries/{z}/{x}/{y}.pbf',
+//		minzoom: 6,
+//		maxzoom: 12
+//	},
+//	oa: {
+//		id: 'oa',
+//		promoteId: 'areacd',
+//		type: 'vector',
+//		url: 'https://cdn.ons.gov.uk/maptiles/administrative/oa/v1/boundaries/{z}/{x}/{y}.pbf',
+//		minzoom: 6,
+//		maxzoom: 12
+//	}
 };
 
 export const mapLayers = {
-	ctry: {
+//	ctry: {
+//		source: 'crd',
+//		sourceLayer: 'region',
+//		code: 'areacd',
+//		name: 'areanm',
+//		filter: [
+//			"all",
+//			["==", "nation", "true"],
+//			["in", "country", "E", "W"]
+//		]
+//	},
+//	rgn: {
+//		source: 'crd',
+//		sourceLayer: 'region',
+//		code: 'areacd',
+//		name: 'areanm',
+//		filter: [
+//			"all",
+//			["==", "region", "true"],
+//			["==", "country", "E"]
+//		]
+//	},
+//	cty: {
+//		source: 'crd',
+//		sourceLayer: 'authority',
+//		code: 'areacd',
+//		name: 'areanm',
+//		filter: [
+//			"all",
+//			["==", "upper", "true"],
+//			["in", "country", "E", "W"]
+//		]
+//	},
+	lgd: {
 		source: 'crd',
-		sourceLayer: 'region',
+		sourceLayer: 'lgd2012',
 		code: 'areacd',
-		name: 'areanm',
-		filter: [
-			"all",
-			["==", "nation", "true"],
-			["in", "country", "E", "W"]
-		]
+		name: 'areanm'
+// removing filter for lgd2012
+//		filter: [
+//			"all",
+//			["==", "lower", "true"],
+//			["in", "country", "E", "W", "N"]
+//		]
 	},
-	rgn: {
-		source: 'crd',
-		sourceLayer: 'region',
-		code: 'areacd',
-		name: 'areanm',
-		filter: [
-			"all",
-			["==", "region", "true"],
-			["==", "country", "E"]
-		]
-	},
-	cty: {
-		source: 'crd',
-		sourceLayer: 'authority',
-		code: 'areacd',
-		name: 'areanm',
-		filter: [
-			"all",
-			["==", "upper", "true"],
-			["in", "country", "E", "W"]
-		]
-	},
-	lad: {
-		source: 'crd',
-		sourceLayer: 'authority',
-		code: 'areacd',
-		name: 'areanm',
-		filter: [
-			"all",
-			["==", "lower", "true"],
-			["in", "country", "E", "W", "N"]
-		]
-	},
-	msoa: {
-		source: 'msoa',
+	dea: {
+		source: 'dea',
 		sourceLayer: 'dea',
 		code: 'areacd',
 		name: 'areanm'
-	},
-	lsoa: {
-		source: 'lsoa',
-		sourceLayer: 'lsoa',
-		code: 'areacd',
-		name: 'areanm'
-	},
-	oa: {
-		source: 'oa',
-		sourceLayer: 'oa',
-		code: 'areacd',
-		name: 'areanm'
 	}
+//	lsoa: {
+//		source: 'lsoa',
+//		sourceLayer: 'lsoa',
+//		code: 'areacd',
+//		name: 'areanm'
+//	},
+//	oa: {
+//		source: 'oa',
+//		sourceLayer: 'oa',
+//		code: 'areacd',
+//		name: 'areanm'
+//	}
 };
 
 export const mapPaint = {
