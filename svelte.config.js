@@ -9,8 +9,8 @@ const config = {
 		target: '#svelte',
 		adapter: static_adapter({
 			// Options below are defaults
-			pages: 'build',
-			assets: 'build',
+			pages: 'docs',
+			assets: 'docs',
 			fallback:'404.html'
 		}),
 		prerender: {
@@ -18,8 +18,8 @@ const config = {
 		},
 		ssr: false,
 		paths: {
-			assets: production ? 'https://bothness.github.io/area-explorer' : '',
-			base: production ? '/area-explorer' : ''
+			assets: production ? 'https://kham1508.github.io/host_test_2' : '',
+			base: production ? '/host_test_2' : ''
 		}
 	}
 };
