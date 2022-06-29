@@ -408,9 +408,13 @@
 		<span class="text-bold">Food adjusted</span><br/>
 		<StackedBarChart data="{place && makeData(['topic_new', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
-		<div>
+	<div>
 		<span class="text-bold">Ethnicity adjusted</span><br/>
 		<StackedBarChart data="{place && makeData(['topic1', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
+	</div>
+	<div>
+		<span class="text-bold">General Health</span><br/>
+		<StackedBarChart data="{place && makeData(['health', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
 	<div>
 		<span class="text-bold">Employment</span><br/>
