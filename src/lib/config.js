@@ -18,7 +18,7 @@ export const themes = {
 
 export const urls = {
 		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v9/places_test.csv',
-		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v10/jsons/',
+		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v11/',
 };
 	
 export const types = {
@@ -52,8 +52,8 @@ export const codes = {
 	],
 	health: [
 		{code: 'good'},
-		{code: 'bad'},
-		{code: 'fair'}
+		{code: 'fair'},
+		{code: 'bad'}
 	],
 	topic_new: [
 		{code: 'bread'},
@@ -62,8 +62,8 @@ export const codes = {
 		{code: 'cheese'},
 		{code: 'eggs'}
 	],
-	topic1: [
-		{code: 'pink', label: 'Pink'},
+	ethnicity: [
+		{code: 'white', label: 'White'},
 		{code: 'asian', label: 'Asian'},
 		{code: 'black', label: 'Black'},
 		{code: 'mixed', label: 'Mixed'},
@@ -78,7 +78,7 @@ export const codes = {
 		{code: 'shared_ownership', label: 'shared ownership'},
 		{code: 'rented_private', label: 'rented (private)'},
 		{code: 'rented_social', label: 'rented (social)'},
-		{code: 'rent_free', label: 'rent free'}
+		{code: 'rent_free', label: 'rent (free)'}
 	],
 	travel: [
 		{code: "car_van", label: "car and van"},
