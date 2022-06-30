@@ -374,7 +374,7 @@
 	</div>
 	<div>
 		<span class="text-bold">Download data</span><br/>
-			Data for {place.name} can be downloaded here.
+			Data for {place.name} can be downloaded here.  
 	</div>
 	<div>
 		<span class="text-bold">Median age</span>
@@ -410,7 +410,7 @@
 	</div>
 	<div>
 		<span class="text-bold">Ethnicity adjusted</span><br/>
-		<StackedBarChart data="{place && makeData(['topic1', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
+		<StackedBarChart data="{place && makeData(['ethnicity', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
 	<div>
 		<span class="text-bold">General Health</span><br/>
