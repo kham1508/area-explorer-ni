@@ -178,7 +178,6 @@ export const mapLayers = {
 		code: 'areacd',
 		name: 'areanm'
 	}
-// comment out lsoa and oa
 //	lsoa: {
 //		source: 'lsoa',
 //		sourceLayer: 'lsoa',
