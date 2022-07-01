@@ -374,7 +374,7 @@
 	</div>
 	<div>
 		<span class="text-bold">Download data</span><br/>
-			Data for {place.name} can be downloaded here.  
+		<a href="http://www.nisra.gov.uk/census/data_download/{place.code}.xlsx">Data for {place.name} can be downloaded here</a>
 	</div>
 	<div>
 		<span class="text-bold">Median age</span>
