@@ -371,9 +371,6 @@
 			{:else}
 			{place.name} is a {types[place.type].name} in {place.parents[0].type == 'rgn' ? 'the ' + place.parents[0].name : place.parents[0].name}.
 			{/if}
-	</div>
-	<div>
-		<span class="text-bold">Download data</span><br/>
 		<a href="http://www.nisra.gov.uk/census/data_download/{place.code}.xlsx">Data for {place.name} can be downloaded here</a>
 	</div>
 	<div>
