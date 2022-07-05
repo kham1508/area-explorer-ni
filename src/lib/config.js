@@ -90,7 +90,8 @@ export const codes = {
 	]
 };
 
-export const mapStyle = 'https://bothness.github.io/ons-basemaps/data/style-omt.json';
+//export const mapStyle = 'https://bothness.github.io/ons-basemaps/data/style-omt.json';
+export const mapStyle = 'https://raw.githubusercontent.com/kham1508/map_tiles/main/basemap_styles/style-omt.json';
 
 export const mapSources = {
 	crd: {
