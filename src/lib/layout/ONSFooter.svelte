@@ -7,22 +7,22 @@
 
 <footer style="color: {theme['text']}; background-color: {theme['pale']};">
 	<div class="col-wide" data-analytics="footer">
-		<a href="https://www.ons.gov.uk/">
+		<a href="https://www.nisra.gov.uk/">
 			{#if theme == 'dark'}
 			<img
 				class="logo-img"
-				src="{assets}/img/ons-logo-neg-en.svg"
-				alt="Office for National Statistics" />
+				src="{assets}/img/nisra-logo-white-transparent-bkgrd.png"
+				alt="Northern Ireland Statistics and Research Agency" />
 			{:else}
 			<img
 				class="logo-img"
-				src="{assets}/img/ons-logo-black-en.svg"
-				alt="Office for National Statistics" />
+				src="{assets}/img/nisra-logo-colour-transparent-bkgrd.png"
+				alt="Northern Ireland Statistics and Research Agency" />
 			{/if}
 		</a>
 		<ul>
-			<li><a href="https://www.ons.gov.uk/aboutus/contactus" class="link" style="color: {theme['text']}">Contact us</a></li>
-			<li><a href="https://www.ons.gov.uk/help/privacynotice" class="link" style="color: {theme['text']}">Cookies and privacy</a></li>
+			<li><a href="https://www.nisra.gov.uk/contact" class="link" style="color: {theme['text']}">Contact us</a></li>
+			<li><a href="https://www.nisra.gov.uk/nisra-privacy-notice" class="link" style="color: {theme['text']}">Cookies and privacy</a></li>
 		</ul>
 		<hr style="border-top-color: {theme['muted']}" />
 		<div class="license">
@@ -80,7 +80,8 @@
 		display: inline-block;
 	}
 	.logo-img {
-		margin-bottom: 27px;
+		margin-bottom: 2px;
+		width: 120px;
 	}
 	.ogl-img {
 		margin: 0 0.5rem 0.2rem 0;

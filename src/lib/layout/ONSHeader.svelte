@@ -9,14 +9,14 @@
 
 <nav style="border-bottom-color: {theme['muted']}; {filled ? 'background-color: ' +  theme['background'] + ';' : ''}">
   <div class="col-wide middle" class:center>
-		<a href="https://www.ons.gov.uk/">
+		<a href="https://www.nisra.gov.uk/">
 			<picture>
 				{#if theme.name == 'dark'}
-				<img src="{assets}/img/ons-logo-neg-en.svg" alt="Office for National Statistics">
+				<img src="{assets}/img/nisra-full-name-stacked-white.svg" alt="Northern Ireland Statistics and Research Agency">
 				{:else if filled == true}
-				<img src="{assets}/img/ons-logo-pos-en.svg" alt="Office for National Statistics">
+				<img src="{assets}/img/nisra-full-name-stacked-colour.svg" alt="Northern Ireland Statistics and Research Agency">
 				{:else}
-				<img src="{assets}/img/ons-logo-black-en.svg" alt="Office for National Statistics">
+				<img src="{assets}/img/nisra-full-name-stacked-colour.svg" alt="Northern Ireland Statistics and Research Agency">
 				{/if}
 			</picture>
 		</a>
@@ -39,7 +39,7 @@
 		padding: 0 2px;
 	}
 	img {
-		width: 270px;
+		width: 120px;
 	}
 	a img:hover {
 		cursor: pointer;
