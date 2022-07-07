@@ -194,15 +194,15 @@
 		float: right;
 	}
 	.down {
-		background-image: url("https://bothness.github.io/geo-draw/img/chevron-down.svg");
+		background-image: url("img/chevron-down.svg");
 		width: 30px;
 	}
 	.search {
-		background-image: url("https://bothness.github.io/geo-draw/img/search.svg");
+		background-image: url("img/search.svg");
 		width: 30px;
 	}
 	.close {
-		background-image: url("https://bothness.github.io/geo-draw/img/x-close.svg");
+		background-image: url("img/x-close.svg");
 		width: 30px;
 	}
 	small {

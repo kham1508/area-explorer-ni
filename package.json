@@ -1,7 +1,7 @@
 {
   "name": "area-explorer",
   "version": "0.0.1",
-  "homepage": "http://bothness.github.io/area-explorer",
+  "homepage": "http://kham1508.github.io/area-explorer-ni/",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
