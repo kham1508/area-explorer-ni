@@ -167,14 +167,12 @@
 	<meta name="description" content="">
   <meta property="og:title" content="{place.name} Census Data" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="{base}/{place.code}/" />
-	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:url" content="{urls.base}/{place.code}/" />
 	<meta property="og:description" content="Explore census data for {place.name}." />
 	<meta name="description" content="Explore census data for {place.name}." />
 </svelte:head>
 
 <Section column="wide">
-{#if place && ew}
 <div class="grid mtl">
 	<div>
 		{#if place.parents[0]}
@@ -417,7 +415,6 @@
 		<StackedBarChart data="{place && makeData(['tenure', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
 </div>
-{/if}
 </Section>
 
 <style>

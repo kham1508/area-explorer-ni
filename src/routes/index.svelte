@@ -3,6 +3,7 @@
 </script>
 <script>
   import { base } from "$app/paths";
+  import { urls } from "$lib/config";
   import Section from "$lib/layout/Section.svelte";
 </script>
 
@@ -11,8 +12,7 @@
   <meta name="description" content="">
   <meta property="og:title" content="Census Area Explorer" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="{base}/" />
-	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:url" content="{urls.base}/" />
 	<meta property="og:description" content="Explore census data for places in Northern Ireland." />
 	<meta name="description" content="Explore census data for places in Northern Ireland." />
 </svelte:head>

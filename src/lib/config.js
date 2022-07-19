@@ -19,6 +19,7 @@ export const themes = {
 export const urls = {
 		options: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v9/places_test.csv',
 		places: 'https://raw.githubusercontent.com/MaireBrolly/test_jsons/main/v13/',
+		base: 'https://kham1508.github.io/area-explorer-ni/'
 };
 	
 export const types = {

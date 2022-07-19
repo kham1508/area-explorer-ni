@@ -1,7 +1,7 @@
 {
-  "name": "area-explorer",
+  "name": "area-explorer-ni",
   "version": "0.0.1",
-  "homepage": "http://bothness.github.io/area-explorer-ni/",
+  "homepage": "https://kham1508.github.io/area-explorer-ni/",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
