@@ -6,27 +6,18 @@
 	// quantiles - not sure but not used in index currently
 	import { urls } from "$lib/config";
 	
-	// create a reference to thye json for the current area to be loaded - called in the load() func below
-	async function loadArea(code, options) {
+	// create a reference to the json for the current area to be loaded - called in the load() func below
+	async function loadArea(code, fetch) {
 		let res = await fetch(urls.places + code + '.json');
 		let json = await res.json();
 
 		return json;
 	}
 
-	async function loadEW(options) {
-		const code = 'N92000001';
+	export async function load({ params, fetch }) {
+		let code = params.code;
 
-		let res = await fetch(urls.places + code + '.json');
-		let json = await res.json();
-
-		return json;
-	}
-
-	export async function load({ page, fetch }) {
-		let code = page.params.code;
-
-		let res = await getData(urls.options);
+		let res = await getData(urls.options, fetch);
 		
 		let lookup = {};
 		res.forEach(d => lookup[d.code] = d.name);
@@ -37,8 +28,8 @@
 		});
 
 		let options = res.sort((a, b) => a.name.localeCompare(b.name));
-		let ew = await loadEW(options);
-		let place = await loadArea(code, options);
+		let ew = await loadArea('N92000001', fetch);
+		let place = await loadArea(code, fetch);
 
 		return {
 			props: { options, place, ew }
@@ -46,7 +37,7 @@
 	}
 </script>
 <script>
-  import { base, assets } from "$app/paths";
+  import { base } from "$app/paths";
   import { goto } from '$app/navigation';
 	import { suffixer, changeClass, changeStr, adjectify } from "$lib/utils";
 	import { types, codes, mapStyle, mapSources, mapLayers, mapPaint } from "$lib/config";
@@ -154,11 +145,11 @@
 	}
 
 	function mapSelect(ev) {
-		goto(`${base}/${ev.detail.code}`, {noscroll: true});
+		goto(`${base}/${ev.detail.code}/`, {noscroll: true});
 	}
 
 	function menuSelect(ev) {
-		goto(`${base}/${ev.detail.value}`, {noscroll: true});
+		goto(`${base}/${ev.detail.value}/`, {noscroll: true});
 	}
 
 	function onResize() {
@@ -176,20 +167,18 @@
 	<meta name="description" content="">
   <meta property="og:title" content="{place.name} Census Data" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="{assets}/{place.code}/" />
-	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:url" content="{urls.base}/{place.code}/" />
 	<meta property="og:description" content="Explore census data for {place.name}." />
 	<meta name="description" content="Explore census data for {place.name}." />
 </svelte:head>
 
 <Section column="wide">
-{#if place && ew}
 <div class="grid mtl">
 	<div>
 		{#if place.parents[0]}
 		<span class="text-small">
 			{#each [...place.parents].reverse() as parent, i}
-			<a href="{base}/{parent.code}" sveltekit:noscroll>{parent.name}</a>{@html ' &gt; '}
+			<a href="{base}/{parent.code}/" sveltekit:noscroll>{parent.name}</a>{@html ' &gt; '}
 			{/each}
 			{place.name}
 		</span><br/>
@@ -342,7 +331,7 @@
 		<span class="text-small">
 		{#if place.parents[0]}
 		{#each [...place.parents].reverse() as parent, i}
-		<span style="display: block; margin-left: {i > 0 ? (i - 1) * 15 : 0}px">{@html i > 0 ? '↳ ' : ''}<a href="{base}/{parent.code}" sveltekit:noscroll>{parent.name}</a></span>
+		<span style="display: block; margin-left: {i > 0 ? (i - 1) * 15 : 0}px">{@html i > 0 ? '↳ ' : ''}<a href="{base}/{parent.code}/" sveltekit:noscroll>{parent.name}</a></span>
 		{/each}
 		{:else}
 		<span class="muted">No parents for {place.name}</span>
@@ -354,7 +343,7 @@
 		<span class="text-small">
 		{#if place.children[0]}
 		{#each place.children as child, i}
-		<a href="{base}/{child.code}" sveltekit:noscroll>{child.name}</a>{ i < place.children.length - 1 ? ', ' : ''}
+		<a href="{base}/{child.code}/" sveltekit:noscroll>{child.name}</a>{ i < place.children.length - 1 ? ', ' : ''}
 		{/each}
 		{:else}
 		<span class="muted">No areas within {place.name}</span>
@@ -426,7 +415,6 @@
 		<StackedBarChart data="{place && makeData(['tenure', 'perc', '2011'])}" zKey="{overtime && hasChange ? 'prev' : !overtime && place.type != 'ew' ? 'ew' : null}" label={chartLabel}/>
 	</div>
 </div>
-{/if}
 </Section>
 
 <style>
